@@ -23,7 +23,7 @@ const Header = () => {
   return (
     <Box sx={{ mr: 5, ml: 5 }}>
       {logo}
-      <Typography variant="h2">{t("BeautyStylist")}</Typography>
+      <Typography variant="h3">{t("BeautyStylist")}</Typography>
       <Typography variant="h2" style={{ fontFamily: "Square Peg, cursive" }}>
         Yuliia Yevdokymova
       </Typography>   
