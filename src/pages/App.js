@@ -1,24 +1,76 @@
-import logo from '../logo.svg';
-import '../styles/App.css';
+import LanguageSwitcher from "../components/LanguageSwitcher";
+import * as React from "react";
+import "../styles/App.css";
+import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+import Grid from "@mui/material/Unstable_Grid2";
+import Box from "@mui/material/Box";
+import Header from "../components/Header";
+import Gallery from "../components/Gallery";
+import { Container, Typography } from "@mui/material";
+import getMainGalleryImages from "../components/MainGalleryImages";
+import { maxWidth } from "@mui/system";
 
 function App() {
+  const { t } = useTranslation();
+  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
+  const theme = React.useMemo(() => {
+    return createTheme({
+      palette: {
+        mode: prefersDarkMode ? "dark" : "light",
+      },
+      typography: {
+        fontFamily: "Marcellus, serif",
+      },
+    });
+  }, [prefersDarkMode]);
+
+  useEffect(() => {
+    document.title = t("Title");
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <ThemeProvider theme={theme}>
+      <CssBaseline enableColorScheme />
+      <Grid>
+        <Grid
+          item
+          container
+          direction="column"
+          alignItems="flex-end"
+          justify="flex-start"
+          style={{ marginTop: 10, marginRight: 15 }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <LanguageSwitcher />
+        </Grid>
+
+        <Grid
+          item
+          container
+          direction="column"
+          justify="center"
+          textAlign="center"          
+        >
+          <Header />
+          <Box sx={{ margin: 5, width: "35vw", display: "flex", alignSelf: "center", maxWidth: "500px", minWidth: "200px"}}>
+            <Gallery images={getMainGalleryImages()} />
+          </Box>
+        </Grid>
+
+        <Grid
+          item
+          container
+          direction="column"
+          justify="center"
+          textAlign="center"
+        >
+          <Typography variant="h4"> {t("AllServices")} </Typography>
+        </Grid>
+      </Grid>
+    </ThemeProvider>
   );
 }
 
