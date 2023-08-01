@@ -12,7 +12,6 @@ import Header from "../components/Header";
 import Gallery from "../components/Gallery";
 import { Container, Typography } from "@mui/material";
 import getMainGalleryImages from "../components/MainGalleryImages";
-import { maxWidth } from "@mui/system";
 
 function App() {
   const { t } = useTranslation();
@@ -42,7 +41,7 @@ function App() {
           direction="column"
           alignItems="flex-end"
           justify="flex-start"
-          style={{ marginTop: 10, marginRight: 15 }}
+          style={{ marginTop: 15, marginRight: 30 }}
         >
           <LanguageSwitcher />
         </Grid>
@@ -52,10 +51,19 @@ function App() {
           container
           direction="column"
           justify="center"
-          textAlign="center"          
+          textAlign="center"
+          alignSelf="center"
         >
           <Header />
-          <Box sx={{ margin: 5, width: "35vw", display: "flex", alignSelf: "center", maxWidth: "500px", minWidth: "200px"}}>
+          <Box
+            sx={{
+              width: "35vw",
+              display: "flex",
+              alignSelf: "center",
+              maxWidth: "500px",
+              minWidth: "200px",
+            }}
+          >
             <Gallery images={getMainGalleryImages()} />
           </Box>
         </Grid>
@@ -65,6 +73,7 @@ function App() {
           container
           direction="column"
           justify="center"
+          alignSelf="center"
           textAlign="center"
         >
           <Typography variant="h4"> {t("AllServices")} </Typography>
