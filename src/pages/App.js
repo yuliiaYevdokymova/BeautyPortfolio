@@ -4,7 +4,7 @@ import "../styles/App.css";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { createTheme, responsiveFontSizes, ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Grid from "@mui/material/Unstable_Grid2";
 import Box from "@mui/material/Box";
@@ -17,7 +17,7 @@ function App() {
   const { t } = useTranslation();
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
   const theme = React.useMemo(() => {
-    return createTheme({
+    let theme = createTheme({
       palette: {
         mode: prefersDarkMode ? "dark" : "light",
       },
@@ -25,6 +25,8 @@ function App() {
         fontFamily: "Marcellus, serif",
       },
     });
+    theme = responsiveFontSizes(theme);
+    return theme;
   }, [prefersDarkMode]);
 
   useEffect(() => {
