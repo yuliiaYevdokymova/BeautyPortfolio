@@ -6,8 +6,8 @@ import { styled } from "@mui/material/styles";
 import useLocalStorage from "../hooks/useLocalStorage";
 
 const LanguageSwitcher = () => {
-  const { t, i18n } = useTranslation();
   const [language, setLanguage] = useLocalStorage("selectedLanguage", "de");
+  const { t, i18n } = useTranslation(); 
   const handleLanguageChange = (e) => {
     const newLang = e.target.value;
     i18n.changeLanguage(newLang);
@@ -16,7 +16,8 @@ const LanguageSwitcher = () => {
   };
 
   useEffect(() => {
-    i18n.changeLanguage(language);
+    i18n.changeLanguage(language);  
+    document.title = t("Title");    
   }, []);
 
   const LanguageMenuItem = styled(MenuItem)({
@@ -30,7 +31,7 @@ const LanguageSwitcher = () => {
     <TextField
       select
       size="small"    
-      value={i18n.language}      
+      value={language}      
       onChange={handleLanguageChange}
     >
       <LanguageMenuItem value="de">

@@ -10,6 +10,8 @@ const Gallery = ({ images }) => {
         showPlayButton={false}
         showThumbnails={false}
         showBullets={true}
+        swipeThreshold="20"
+        lazyLoad={true}
       />   
   );
 };

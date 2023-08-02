@@ -10,12 +10,12 @@ const Header = () => {
     return prefersDarkMode ? (
       <img
         src={require("../assests/images/lightLogo.png")}
-        style={{ height: "25vh", minHeight: 100 }}
+        style={{ height: "15vh", minHeight: 100 }}
       ></img>
     ) : (
       <img
         src={require("../assests/images/darkLogo.png")}
-        style={{ height: "25vh", minHeight: 100 }}
+        style={{ height: "15vh", minHeight: 100 }}
       ></img>
     );
   }, [prefersDarkMode]);
@@ -23,7 +23,7 @@ const Header = () => {
   return (
     <Box>
       {logo}
-      <Typography variant="h2">{t("BeautyStylist")}</Typography>
+      <Typography variant="h3">{t("BeautyStylist")}</Typography>
       <Typography variant="h2" style={{ fontFamily: "Square Peg, cursive" }}>
         Yuliia Yevdokymova
       </Typography>   
