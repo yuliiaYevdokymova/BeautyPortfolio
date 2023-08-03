@@ -3,15 +3,15 @@ import { useTranslation } from "react-i18next";
 import TextField from "@mui/material/TextField";
 import MenuItem from "@mui/material/MenuItem";
 import { styled } from "@mui/material/styles";
-import useLocalStorage from "../hooks/useLocalStorage";
 
 const LanguageSwitcher = () => {
-  const [language, setLanguage] = useLocalStorage("selectedLanguage", "de");
+  const languageStorageKey = "selectedLanguage";
+  const language = localStorage.getItem(languageStorageKey);
   const { t, i18n } = useTranslation(); 
   const handleLanguageChange = (e) => {
     const newLang = e.target.value;
     i18n.changeLanguage(newLang);
-    setLanguage(newLang);
+    localStorage.setItem(languageStorageKey, newLang);
     document.title = t("Title");  
   };
 

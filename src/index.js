@@ -4,13 +4,16 @@ import "./styles/index.css";
 import App from "./pages/App";
 import reportWebVitals from "./reportWebVitals";
 import { I18nextProvider } from "react-i18next";
+import { initReactI18next } from 'react-i18next';
 import i18next from "i18next";
 import uaLocale from "./locales/ua.json";
 import deLocale from "./locales/de.json";
 
-i18next.init({
+i18next
+.use(initReactI18next)
+.init({
   interpolation: { escapeValue: false },
-  fallbackLng: "de",  
+  fallbackLng: localStorage.getItem("selectedLanguage") || "de",  
   resources: {
     de: {
       translation: deLocale,

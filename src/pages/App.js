@@ -217,7 +217,7 @@ function App() {
             maxWidth: "90vw",
           }}
         >
-          <Gallery images={getEyeBrowsGalleryImages()} />
+          <Gallery images={getEyeLashesGalleryImages()} />
         </Box>
 
         <Typography alignSelf="flex-start" variant="h5">
@@ -233,7 +233,7 @@ function App() {
               minWidth: "250px",
             }}
             component="img"
-            src={require("../assests/images/MainBrowsAndLashesImage.jpg")}
+            src={require("../assests/images/PermanentMainPhoto.PNG")}
           />
 
           <Typography>{t("PermanentBrowsTextPart1")}</Typography>
