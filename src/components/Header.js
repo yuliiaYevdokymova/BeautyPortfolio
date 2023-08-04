@@ -10,12 +10,12 @@ const Header = () => {
     return prefersDarkMode ? (
       <img
         src={require("../assests/images/lightLogo.png")}
-        style={{ height: "15vh", minHeight: 100 }}
+        style={{ height: "15vh", minHeight: 50 }}
       ></img>
     ) : (
       <img
         src={require("../assests/images/darkLogo.png")}
-        style={{ height: "15vh", minHeight: 100 }}
+        style={{ height: "15vh", minHeight: 50 }}
       ></img>
     );
   }, [prefersDarkMode]);

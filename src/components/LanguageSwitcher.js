@@ -33,6 +33,7 @@ const LanguageSwitcher = () => {
       size="small"    
       value={language}      
       onChange={handleLanguageChange}
+      SelectProps={{ MenuProps: { disableScrollLock: true } }}
     >
       <LanguageMenuItem value="de">
         <span style={{ marginRight: 5 }}>DE</span>

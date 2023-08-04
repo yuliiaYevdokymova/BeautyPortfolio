@@ -22,6 +22,7 @@ import getWeddingMakeupImages from "../functions/WeddingMakeupImages";
 import getEyeBrowsGalleryImages from "../functions/EyeBrowsImages";
 import getEyeLashesGalleryImages from "../functions/EyeLashesImages";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import ImageGallery from "react-image-gallery";
 
 function App() {
   const { t } = useTranslation();
@@ -48,337 +49,298 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline enableColorScheme />
 
-      <div className="background" />   
+      <Box sx={{ position: "absolute", top: 5, right: 5 }}>
+        <LanguageSwitcher />
+      </Box>
 
-      <Parallax pages={8}>
-        <ParallaxLayer offset={0} speed={0.5}>
-          <Grid
-            container
-            sx={{ mr: 2, ml: 2, mt: 2 }}
-            direction="column"
-            justify="center"
-            textAlign="center"
-            alignSelf="center"
-          >
-            <Header />
-            <Box
-              sx={{
-                display: "flex",
-                alignSelf: "center",
-                marginTop: 2,
-                width: "40vh",
-                maxWidth: "90vw",
-              }}
-            >
-              <Gallery images={getMainGalleryImages()} />
-            </Box>
+      <Grid
+        container
+        sx={{ mr: 2, ml: 2, mt: 2, minHeight: "100vh" }}
+        direction="column"
+        justify="center"
+        textAlign="center"
+        alignSelf="center"
+      >
+        <Header />
 
-            <Typography justify="center" sx={{ marginTop: 2 }} variant="h5">
-              {t("AllServices")}
-            </Typography>
-          </Grid>
-        </ParallaxLayer>
-
-        <ParallaxLayer
-          offset={1}
-          speed={0.5}
-          style={{ ...alignCenter, justifyContent: "center" }}
+        <Box
+          sx={{
+            display: "flex",
+            alignSelf: "center",
+            marginTop: 2,
+            width: "40vh",
+            maxWidth: "90vw",
+          }}
         >
-          <Grid
-            container
-            sx={{ mr: 2, ml: 2, mt: 2 }}
-            direction="column"
-            justify="center"
-            textAlign="center"
-            alignSelf="center"
-          >
-            <Typography> {t("GreetingPart1")} </Typography>
-            <Typography> {t("GreetingPart2")} </Typography>
+          <ImageGallery
+            items={getMainGalleryImages()}
+            showPlayButton={false}
+            showThumbnails={false}
+            showBullets={true}
+            swipeThreshold="20"
+            lazyLoad={true}
+          />
+        </Box>
 
-            <Box
-              sx={{
-                alignSelf: "center",
-                marginTop: 2,
-                width: "50vh",
-                maxWidth: "90vw",
-                minWidth: "250px",
-              }}
-              component="img"
-              src={require("../assests/images/GreetingPhoto.jpg")}
-            />
-          </Grid>
-        </ParallaxLayer>
+        <Typography justify="center" sx={{ marginTop: 2 }} variant="h5">
+          {t("AllServices")}
+        </Typography>
+      </Grid>
 
-        <ParallaxLayer
-          offset={2}
-          speed={0.5}
-          style={{ ...alignCenter, justifyContent: "center" }}
+      <Container
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Box>
+          <Typography sx={{ width: "100%" }}> {t("GreetingPart1")} </Typography>
+          <Typography sx={{ width: "100%" }}> {t("GreetingPart2")} </Typography>
+        </Box>
+
+        <Box
+          xs={6}
+          sx={{
+            maxWidth: "50%",
+            height: "auto",
+            maxHeight: "80vh",
+          }}
+          component="img"
+          src={require("../assests/images/GreetingPhoto.jpg")}
+        />
+      </Container>
+
+      <Grid
+        container
+        sx={{ mr: 2, ml: 2, mt: 2 }}
+        direction="column"
+        justify="center"
+        textAlign="center"
+        alignSelf="center"
+      >
+        <Typography justify="center" variant="h5">
+          {t("MyServices")}
+        </Typography>
+
+        <Typography alignSelf="flex-start" variant="h5">
+          {t("Makeup")}
+        </Typography>
+
+        <Container
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
         >
-          <Grid
-            container
-            sx={{ mr: 2, ml: 2, mt: 2 }}
-            direction="column"
-            justify="center"
-            textAlign="center"
-            alignSelf="center"
-          >
-            <Typography justify="center" variant="h5">
-              {t("MyServices")}
-            </Typography>
+          <Box
+            xs={6}
+            sx={{
+              maxWidth: "50%",
+              height: "auto",
+              maxHeight: "80vh",
+            }}
+            component="img"
+            src={require("../assests/images/makeupMainPhoto.PNG")}
+          />
+           <Container>
+          <Typography sx={{ width: "100%" }}>{t("MakeupMainText")}</Typography>
+          </Container>
+        </Container>
+      </Grid>
 
-            <Typography alignSelf="flex-start" variant="h5">
-              {t("Makeup")}
-            </Typography>
+      <Grid
+        container
+        sx={{ mr: 2, ml: 2, mt: 2 }}
+        direction="column"
+        justify="center"
+        textAlign="center"
+        alignSelf="center"
+      >
+        <Typography alignSelf="flex-start" variant="h5">
+          {t("LightMakeup")}
+        </Typography>
 
-            <Grid item container alignSelf="flex-start">
-              <Box
-                sx={{
-                  marginTop: 2,
-                  width: "50vh",
-                  maxWidth: "90vw",
-                  minWidth: "250px",
-                }}
-                component="img"
-                src={require("../assests/images/makeupMainPhoto.PNG")}
-              />
+        <Typography alignSelf="flex-start">{t("LightMakeupText")}</Typography>
 
-              <Typography>{t("MakeupMainText")}</Typography>
-            </Grid>
-          </Grid>
-        </ParallaxLayer>
-
-        <ParallaxLayer
-          offset={3}
-          speed={0.5}
-          style={{ ...alignCenter, justifyContent: "center" }}
+        <Box
+          sx={{
+            display: "flex",
+            alignSelf: "center",
+            marginTop: 2,
+            width: "30vh",
+            maxWidth: "90vw",
+          }}
         >
-          <Grid
-            container
-            sx={{ mr: 2, ml: 2, mt: 2 }}
-            direction="column"
-            justify="center"
-            textAlign="center"
-            alignSelf="center"
-          >
-            <Typography alignSelf="flex-start" variant="h5">
-              {t("LightMakeup")}
-            </Typography>
+          <Gallery images={getLightMakeupGalleryImages()} />
+        </Box>
+      </Grid>
 
-            <Typography alignSelf="flex-start">
-              {t("LightMakeupText")}
-            </Typography>
+      <Grid
+        container
+        sx={{ mr: 2, ml: 2, mt: 2 }}
+        direction="column"
+        justify="center"
+        textAlign="center"
+        alignSelf="center"
+      >
+        <Typography alignSelf="flex-start" variant="h5">
+          {t("HardMakeup")}
+        </Typography>
 
-            <Box
-              sx={{
-                display: "flex",
-                alignSelf: "center",
-                marginTop: 2,
-                width: "30vh",
-                maxWidth: "90vw",
-              }}
-            >
-              <Gallery images={getLightMakeupGalleryImages()} />
-            </Box>
-          </Grid>
-        </ParallaxLayer>
+        <Typography alignSelf="flex-start">{t("HardMakeupText")}</Typography>
 
-        <ParallaxLayer
-          offset={4}
-          speed={0.5}
-          style={{ ...alignCenter, justifyContent: "center" }}
+        <Box
+          sx={{
+            display: "flex",
+            alignSelf: "center",
+            marginTop: 2,
+            width: "30vh",
+            maxWidth: "90vw",
+          }}
         >
-          <Grid
-            container
-            sx={{ mr: 2, ml: 2, mt: 2 }}
-            direction="column"
-            justify="center"
-            textAlign="center"
-            alignSelf="center"
-          >
-            <Typography alignSelf="flex-start" variant="h5">
-              {t("HardMakeup")}
-            </Typography>
+          <Gallery images={getHardMakeupGalleryImages()} />
+        </Box>
+      </Grid>
 
-            <Typography alignSelf="flex-start">
-              {t("HardMakeupText")}
-            </Typography>
+      <Grid
+        container
+        sx={{ mr: 2, ml: 2, mt: 2 }}
+        direction="column"
+        justify="center"
+        textAlign="center"
+        alignSelf="center"
+      >
+        <Typography alignSelf="flex-start" variant="h5">
+          {t("WeddingMakeup")}
+        </Typography>
 
-            <Box
-              sx={{
-                display: "flex",
-                alignSelf: "center",
-                marginTop: 2,
-                width: "30vh",
-                maxWidth: "90vw",
-              }}
-            >
-              <Gallery images={getHardMakeupGalleryImages()} />
-            </Box>
-          </Grid>
-        </ParallaxLayer>
+        <Typography alignSelf="flex-start">{t("WeddingMakeupText")}</Typography>
 
-        <ParallaxLayer
-          offset={5}
-          speed={0.5}
-          style={{ ...alignCenter, justifyContent: "center" }}
+        <Box
+          sx={{
+            display: "flex",
+            alignSelf: "center",
+            marginTop: 2,
+            width: "30vh",
+            maxWidth: "90vw",
+          }}
         >
-          <Grid
-            container
-            sx={{ mr: 2, ml: 2, mt: 2 }}
-            direction="column"
-            justify="center"
-            textAlign="center"
-            alignSelf="center"
-          >
-            <Typography alignSelf="flex-start" variant="h5">
-              {t("WeddingMakeup")}
-            </Typography>
+          <Gallery images={getWeddingMakeupImages()} />
+        </Box>
+      </Grid>
 
-            <Typography alignSelf="flex-start">
-              {t("WeddingMakeupText")}
-            </Typography>
+      <Grid
+        container
+        sx={{ mr: 2, ml: 2, mt: 2 }}
+        direction="column"
+        justify="center"
+        textAlign="center"
+        alignSelf="center"
+      >
+        <Typography alignSelf="flex-start" variant="h5">
+          {t("EyeBrowsAndLashes")}
+        </Typography>
 
-            <Box
-              sx={{
-                display: "flex",
-                alignSelf: "center",
-                marginTop: 2,
-                width: "30vh",
-                maxWidth: "90vw",
-              }}
-            >
-              <Gallery images={getWeddingMakeupImages()} />
-            </Box>
-          </Grid>
-        </ParallaxLayer>
+        <Grid item container alignSelf="flex-start">
+          <Box
+            sx={{
+              marginTop: 2,
+              width: "50vh",
+              maxWidth: "90vw",
+              minWidth: "250px",
+            }}
+            component="img"
+            src={require("../assests/images/MainBrowsAndLashesImage.jpg")}
+          />
 
-        <ParallaxLayer
-          offset={6}
-          speed={0.5}
-          style={{ ...alignCenter, justifyContent: "center" }}
+          <Typography>{t("EyeBrowsAndLashesText")}</Typography>
+        </Grid>
+
+        <Typography alignSelf="flex-start">{t("EyeBrowsText")}</Typography>
+
+        <Box
+          sx={{
+            display: "flex",
+            alignSelf: "center",
+            marginTop: 2,
+            width: "30vh",
+            maxWidth: "90vw",
+          }}
         >
-          <Grid
-            container
-            sx={{ mr: 2, ml: 2, mt: 2 }}
-            direction="column"
-            justify="center"
-            textAlign="center"
-            alignSelf="center"
-          >
-            <Typography alignSelf="flex-start" variant="h5">
-              {t("EyeBrowsAndLashes")}
-            </Typography>
+          <Gallery images={getEyeBrowsGalleryImages()} />
+        </Box>
 
-            <Grid item container alignSelf="flex-start">
-              <Box
-                sx={{
-                  marginTop: 2,
-                  width: "50vh",
-                  maxWidth: "90vw",
-                  minWidth: "250px",
-                }}
-                component="img"
-                src={require("../assests/images/MainBrowsAndLashesImage.jpg")}
-              />
+        <Typography alignSelf="flex-start">{t("EyeLashesText")}</Typography>
 
-              <Typography>{t("EyeBrowsAndLashesText")}</Typography>
-            </Grid>
-
-            <Typography alignSelf="flex-start">{t("EyeBrowsText")}</Typography>
-
-            <Box
-              sx={{
-                display: "flex",
-                alignSelf: "center",
-                marginTop: 2,
-                width: "30vh",
-                maxWidth: "90vw",
-              }}
-            >
-              <Gallery images={getEyeBrowsGalleryImages()} />
-            </Box>
-
-            <Typography alignSelf="flex-start">{t("EyeLashesText")}</Typography>
-
-            <Box
-              sx={{
-                display: "flex",
-                alignSelf: "center",
-                marginTop: 2,
-                width: "30vh",
-                maxWidth: "90vw",
-              }}
-            >
-              <Gallery images={getEyeLashesGalleryImages()} />
-            </Box>
-
-            <Typography alignSelf="flex-start" variant="h5">
-              {t("PermanentBrows")}
-            </Typography>
-
-            <Grid item container alignSelf="flex-start">
-              <Box
-                sx={{
-                  marginTop: 2,
-                  width: "50vh",
-                  maxWidth: "90vw",
-                  minWidth: "250px",
-                }}
-                component="img"
-                src={require("../assests/images/PermanentMainPhoto.PNG")}
-              />
-
-              <Typography>{t("PermanentBrowsTextPart1")}</Typography>
-            </Grid>
-
-            <Typography>{t("PermanentBrowsTextPart2")}</Typography>
-
-            <Box
-              sx={{
-                display: "flex",
-                alignSelf: "center",
-                marginTop: 2,
-                width: "30vh",
-                maxWidth: "90vw",
-              }}
-            >
-              <Gallery images={getEyeBrowsGalleryImages()} />
-            </Box>
-          </Grid>
-        </ParallaxLayer>
-
-        <ParallaxLayer
-          offset={7}
-          speed={0.5}
-          style={{ ...alignCenter, justifyContent: "center" }}
+        <Box
+          sx={{
+            display: "flex",
+            alignSelf: "center",
+            marginTop: 2,
+            width: "30vh",
+            maxWidth: "90vw",
+          }}
         >
-          <Grid
-            container
-            sx={{ mr: 2, ml: 2, mt: 2 }}
-            direction="column"
-            justify="center"
-            textAlign="center"
-            alignSelf="center"
-          >
-            <Typography justify="center" sx={{ marginTop: 2 }} variant="h5">
-              {t("AboutMe")}
-            </Typography>
+          <Gallery images={getEyeLashesGalleryImages()} />
+        </Box>
 
-            <Typography alignSelf="flex-start">{t("AboutMeText")}</Typography>
+        <Typography alignSelf="flex-start" variant="h5">
+          {t("PermanentBrows")}
+        </Typography>
 
-            <Typography justify="center" sx={{ marginTop: 2 }} variant="h5">
-              {t("Contacts")}
-            </Typography>
+        <Grid item container alignSelf="flex-start">
+          <Box
+            sx={{
+              marginTop: 2,
+              width: "50vh",
+              maxWidth: "90vw",
+              minWidth: "250px",
+            }}
+            component="img"
+            src={require("../assests/images/PermanentMainPhoto.PNG")}
+          />
 
-            <Typography justify="center" sx={{ marginTop: 2 }} variant="h5">
-              {t("FollowMe")}
-            </Typography>
-          </Grid>
-        </ParallaxLayer>
-      </Parallax>
+          <Typography>{t("PermanentBrowsTextPart1")}</Typography>
+        </Grid>
 
-      <Grid style={{ position: "absolute", top: 5, right: 20 }}>
-        <LanguageSwitcher style={{ marginTop: 10 }} />
+        <Typography>{t("PermanentBrowsTextPart2")}</Typography>
+
+        <Box
+          sx={{
+            display: "flex",
+            alignSelf: "center",
+            marginTop: 2,
+            width: "30vh",
+            maxWidth: "90vw",
+          }}
+        >
+          <Gallery images={getEyeBrowsGalleryImages()} />
+        </Box>
+      </Grid>
+
+      <Grid
+        container
+        sx={{ mr: 2, ml: 2, mt: 2 }}
+        direction="column"
+        justify="center"
+        textAlign="center"
+        alignSelf="center"
+      >
+        <Typography justify="center" sx={{ marginTop: 2 }} variant="h5">
+          {t("AboutMe")}
+        </Typography>
+
+        <Typography alignSelf="flex-start">{t("AboutMeText")}</Typography>
+
+        <Typography justify="center" sx={{ marginTop: 2 }} variant="h5">
+          {t("Contacts")}
+        </Typography>
+
+        <Typography justify="center" sx={{ marginTop: 2 }} variant="h5">
+          {t("FollowMe")}
+        </Typography>
       </Grid>
     </ThemeProvider>
   );
