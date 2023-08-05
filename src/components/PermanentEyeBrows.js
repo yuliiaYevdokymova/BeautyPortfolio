@@ -19,26 +19,7 @@ const PermanentEyeBrows = () => {
       >
         <Container>
           <Typography alignSelf="flex-start">{t("PermanentBrowsText")}</Typography>
-        </Container>
-
-        <Box
-          sx={{
-            display: "flex",
-            alignSelf: "center",
-            marginTop: 2,
-            width: "45vh",
-            maxWidth: "90vw",
-          }}
-        >
-          <ImageGallery
-            items={getEyeBrowsGalleryImages()}
-            showPlayButton={false}
-            showThumbnails={false}
-            showBullets={true}
-            swipeThreshold="20"
-            lazyLoad={true}
-          />
-        </Box>
+        </Container>    
       </Grid>
   );
 };
