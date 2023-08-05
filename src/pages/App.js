@@ -27,6 +27,7 @@ import PermanentEyeBrowsIntro from "../components/PermanentEyeBrowsIntro";
 import PermanentEyeBrows from "../components/PermanentEyeBrows";
 import About from "../components/About";
 import Contacts from "../components/Contacts";
+import Price from "../components/Price";
 
 function App() {
   const { t } = useTranslation();
@@ -58,16 +59,21 @@ function App() {
         <LanguageSwitcher />
       </Box>
 
-      <StartWithMainGallery/>
+      <StartWithMainGallery />
 
       <Greeting />
 
-      <Grid sx={{mb: 2}}>
-        <Typography textAlign="center" sx={{mr: 2, ml: 2}} alignSelf="center" variant="h5">
+      <Grid sx={{ mb: 2 }}>
+        <Typography
+          textAlign="center"
+          sx={{ mr: 2, ml: 2 }}
+          alignSelf="center"
+          variant="h5"
+        >
           {t("MyServices")}
         </Typography>
 
-        <Typography alignSelf="flex-start" sx={{ml: 3}} variant="h5">
+        <Typography alignSelf="flex-start" sx={{ ml: 3 }} variant="h5">
           {t("Makeup")}
         </Typography>
       </Grid>
@@ -80,15 +86,15 @@ function App() {
 
       <WeddingMakeup />
 
-      <Typography alignSelf="flex-start" sx={{ml: 3, mb:2}} variant="h5">
+      <Typography alignSelf="flex-start" sx={{ ml: 3, mb: 2 }} variant="h5">
         {t("EyeBrowsAndLashes")}
       </Typography>
 
       <EyeBrowsAndLashesIntro />
-      
+
       <EyeBrowsAndLashes />
 
-      <Typography alignSelf="flex-start" sx={{ml: 3, mb:2}} variant="h5">
+      <Typography alignSelf="flex-start" sx={{ ml: 3, mb: 2 }} variant="h5">
         {t("PermanentBrows")}
       </Typography>
 
@@ -96,13 +102,21 @@ function App() {
 
       <PermanentEyeBrows />
 
-      <Grid sx={{mb: 2}}>
+      <Grid sx={{ mb: 2 }}>
         <Typography textAlign="center" alignSelf="center" variant="h5">
           {t("AboutMe")}
         </Typography>
       </Grid>
 
       <About />
+
+      <Grid sx={{ mb: 2 }}>
+        <Typography textAlign="center" alignSelf="center" variant="h5">
+          {t("Price")}
+        </Typography>
+      </Grid>
+
+      <Price />
       <Contacts />
     </ThemeProvider>
   );
