@@ -9,7 +9,7 @@ const EyeBrowsAndLashes = () => {
   const { t } = useTranslation();
 
   return (
-    <Grid>
+    <Grid sx={{mb:2}}>
       <Grid
         container
         direction="column"
@@ -28,6 +28,7 @@ const EyeBrowsAndLashes = () => {
             marginTop: 2,
             width: "45vh",
             maxWidth: "90vw",
+            mb:2
           }}
         >
           <ImageGallery

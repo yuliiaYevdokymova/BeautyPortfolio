@@ -15,6 +15,7 @@ const PermanentEyeBrows = () => {
         justify="center"
         textAlign="center"
         alignSelf="center"
+        sx={{mb: 2}}
       >
         <Container>
           <Typography alignSelf="flex-start">{t("PermanentBrowsText")}</Typography>

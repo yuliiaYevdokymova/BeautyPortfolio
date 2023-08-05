@@ -13,9 +13,10 @@ const LightMakeup = () => {
         direction="column"
         justify="center"
         textAlign="center"
-        alignSelf="center"
+        alignSelf="center"       
+        sx={{mb: 2}}
       >
-        <Typography alignSelf="flex-start" variant="h5">
+        <Typography sx={{ml: 2, mb:2}} alignSelf="flex-start" variant="h5">
           {t("LightMakeup")}
         </Typography>
 

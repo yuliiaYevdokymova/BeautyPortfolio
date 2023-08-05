@@ -39,6 +39,7 @@ function App() {
       },
       typography: {
         fontFamily: "Marcellus, serif",
+        fontSize: 16,
       },
     });
     theme = responsiveFontSizes(theme);
@@ -57,16 +58,16 @@ function App() {
         <LanguageSwitcher />
       </Box>
 
-      <StartWithMainGallery />
+      <StartWithMainGallery/>
 
       <Greeting />
 
-      <Grid>
+      <Grid sx={{mb: 2}}>
         <Typography textAlign="center" alignSelf="center" variant="h5">
           {t("MyServices")}
         </Typography>
 
-        <Typography alignSelf="flex-start" variant="h5">
+        <Typography alignSelf="flex-start" sx={{ml: 2}} variant="h5">
           {t("Makeup")}
         </Typography>
       </Grid>
@@ -79,7 +80,7 @@ function App() {
 
       <WeddingMakeup />
 
-      <Typography alignSelf="flex-start" variant="h5">
+      <Typography alignSelf="flex-start" sx={{ml: 2, mb:2}} variant="h5">
         {t("EyeBrowsAndLashes")}
       </Typography>
 
@@ -87,7 +88,7 @@ function App() {
       
       <EyeBrowsAndLashes />
 
-      <Typography alignSelf="flex-start" variant="h5">
+      <Typography alignSelf="flex-start" sx={{ml: 2, mb:2}} variant="h5">
         {t("PermanentBrows")}
       </Typography>
 
@@ -95,7 +96,7 @@ function App() {
 
       <PermanentEyeBrows />
 
-      <Grid>
+      <Grid sx={{mb: 2}}>
         <Typography textAlign="center" alignSelf="center" variant="h5">
           {t("AboutMe")}
         </Typography>

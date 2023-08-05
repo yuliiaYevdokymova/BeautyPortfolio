@@ -12,6 +12,7 @@ const Makeup = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        mb:2
       }}
     >      
 
@@ -20,7 +21,8 @@ const Makeup = () => {
         sx={{
           display: "flex",
           alignItems: "center",
-          justifyContent: "center",
+          justifyContent: "center",   
+          mb:2      
         }}
       >
         <Box

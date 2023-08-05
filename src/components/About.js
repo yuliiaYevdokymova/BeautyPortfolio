@@ -12,6 +12,7 @@ const About = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        mb:2
       }}
     >
       <Container
@@ -21,6 +22,7 @@ const About = () => {
           display: "flex",
           textAlign: "center",
           alignSelf: "center",
+          mb:2
         }}
       >
         <Typography sx={{ width: "100%" }}>{t("AboutMeText")}</Typography>

@@ -11,7 +11,8 @@ const Greeting = () => {
       sx={{
         display: "flex",
         alignItems: "center",
-        justifyContent: "center",
+        justifyContent: "center",        
+        mb:2
       }}
     >
       <Container
@@ -21,6 +22,7 @@ const Greeting = () => {
           display: "flex",
           textAlign: "center",
           alignSelf: "center",
+          mb:2
         }}
       >
         <Typography sx={{ width: "100%" }}>

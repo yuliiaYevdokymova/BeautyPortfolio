@@ -12,7 +12,7 @@ const StartWithMainGallery = () => {
   return (
     <Grid
         container
-        sx={{ minHeight: "100vh" }}
+        sx={{ minHeight: "100vh", mb:2}}
         direction="column"
         justify="center"
         textAlign="center"
