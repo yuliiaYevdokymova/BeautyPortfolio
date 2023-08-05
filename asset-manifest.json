@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c0e8c698.css",
-    "main.js": "/static/js/main.a3d22606.js",
+    "main.js": "/static/js/main.1543bd7a.js",
     "static/js/787.a7305812.chunk.js": "/static/js/787.a7305812.chunk.js",
     "static/media/GreetingPhoto.jpg": "/static/media/GreetingPhoto.59c62105e796a5b54eb7.jpg",
     "static/media/MainBrowsAndLashesImage.jpg": "/static/media/MainBrowsAndLashesImage.e2014b7b43e830d76322.jpg",
@@ -26,8 +26,10 @@
     "static/media/12.JPG": "/static/media/12.38bb657cfba5130b23be.JPG",
     "static/media/4.JPG": "/static/media/4.f53f38ffb0eb9b814683.JPG",
     "static/media/3.jpg": "/static/media/3.6380aaeb97345e87212e.jpg",
+    "static/media/EyeBrowsAndLashesPrice.JPG": "/static/media/EyeBrowsAndLashesPrice.a6de5b195de97ad8241c.JPG",
     "static/media/3.JPG": "/static/media/3.a51dac48d2af918d88bb.JPG",
     "static/media/10.jpeg": "/static/media/10.f1df53954c190fcce3c4.jpeg",
+    "static/media/MakeupPrice.JPG": "/static/media/MakeupPrice.932259f4b23befce4679.JPG",
     "static/media/14.jpg": "/static/media/14.065eb3e75da7f4f93554.jpg",
     "static/media/1.jpg": "/static/media/1.1936c190e86b8dc038e4.jpg",
     "static/media/10.jpg": "/static/media/10.1936c190e86b8dc038e4.jpg",
@@ -51,11 +53,11 @@
     "static/media/8.PNG": "/static/media/8.dfb86942fa8ec0f633fb.PNG",
     "index.html": "/index.html",
     "main.c0e8c698.css.map": "/static/css/main.c0e8c698.css.map",
-    "main.a3d22606.js.map": "/static/js/main.a3d22606.js.map",
+    "main.1543bd7a.js.map": "/static/js/main.1543bd7a.js.map",
     "787.a7305812.chunk.js.map": "/static/js/787.a7305812.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c0e8c698.css",
-    "static/js/main.a3d22606.js"
+    "static/js/main.1543bd7a.js"
   ]
 }
