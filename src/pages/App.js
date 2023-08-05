@@ -15,7 +15,6 @@ import Box from "@mui/material/Box";
 import "../styles/Gallery.css";
 import "../styles/image-gallery.scss";
 import { Typography } from "@mui/material";
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import StartWithMainGallery from "../components/StartWithMainGallery";
 import Greeting from "../components/Greeting";
 import Makeup from "../components/Makeup";
