@@ -63,11 +63,11 @@ function App() {
       <Greeting />
 
       <Grid sx={{mb: 2}}>
-        <Typography textAlign="center" alignSelf="center" variant="h5">
+        <Typography textAlign="center" sx={{mr: 2, ml: 2}} alignSelf="center" variant="h5">
           {t("MyServices")}
         </Typography>
 
-        <Typography alignSelf="flex-start" sx={{ml: 2}} variant="h5">
+        <Typography alignSelf="flex-start" sx={{ml: 3}} variant="h5">
           {t("Makeup")}
         </Typography>
       </Grid>
@@ -80,7 +80,7 @@ function App() {
 
       <WeddingMakeup />
 
-      <Typography alignSelf="flex-start" sx={{ml: 2, mb:2}} variant="h5">
+      <Typography alignSelf="flex-start" sx={{ml: 3, mb:2}} variant="h5">
         {t("EyeBrowsAndLashes")}
       </Typography>
 
@@ -88,7 +88,7 @@ function App() {
       
       <EyeBrowsAndLashes />
 
-      <Typography alignSelf="flex-start" sx={{ml: 2, mb:2}} variant="h5">
+      <Typography alignSelf="flex-start" sx={{ml: 3, mb:2}} variant="h5">
         {t("PermanentBrows")}
       </Typography>
 

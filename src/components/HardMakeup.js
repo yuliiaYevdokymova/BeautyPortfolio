@@ -16,7 +16,7 @@ const HardMakeup = () => {
         alignSelf="center"
         sx={{ mb:2}}
       >
-        <Typography sx={{ml: 2, mb:2}} alignSelf="flex-start" variant="h5">
+        <Typography sx={{ml: 3, mb:2}} alignSelf="flex-start" variant="h5">
           {t("HardMakeup")}
         </Typography>
 
