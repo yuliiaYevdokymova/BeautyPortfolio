@@ -1,11 +1,27 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Box, Grid, Typography, Container } from "@mui/material";
+import {
+  Box,
+  Grid,
+  Typography,
+  Container,
+  Button,
+  Collapse,
+  useTheme
+} from "@mui/material";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import getWeddingMakeupImages from "../functions/WeddingMakeupImages";
 import ImageGallery from "react-image-gallery";
 
 const WeddingMakeup = () => {
   const { t } = useTranslation();
+  const [detailsVisible, setChecked] = React.useState(false);
+  const theme = useTheme();
+  const textColor = theme.palette.text.primary;
+  const handleDropDownClick = () => {
+    setChecked(!detailsVisible);
+  };
 
   return (
     <Grid
@@ -16,13 +32,27 @@ const WeddingMakeup = () => {
         alignSelf="center"
         sx={{mb:2}}
       >
-        <Typography sx={{ml: 3, mb:2}} alignSelf="flex-start" variant="h5">
-          {t("WeddingMakeup")}
-        </Typography>
+        <Button        
+        endIcon={detailsVisible ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
+        alignSelf="flex-start"
+        onClick={handleDropDownClick}
+        sx={{
+          ml: 1,
+          mb: 2,
+          width: 250,
+          textTransform: "none",
+          padding: 0,
+          color: { color: textColor },
+        }}
+      >
+        <Typography variant="h5">{t("WeddingMakeup")}</Typography>
+      </Button>
 
-        <Container>
+      <Container>
+        <Collapse in={detailsVisible}>
           <Typography alignSelf="flex-start">{t("WeddingMakeupText")}</Typography>
-        </Container>
+        </Collapse>
+      </Container>
 
         <Box
           sx={{

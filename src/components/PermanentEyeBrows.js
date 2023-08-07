@@ -1,12 +1,25 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Box, Grid, Typography, Container } from "@mui/material";
-import getLightMakeupGalleryImages from "../functions/LightMakeupmages";
-import ImageGallery from "react-image-gallery";
-import getEyeBrowsGalleryImages from "../functions/EyeBrowsImages";
+import {
+  Box,
+  Grid,
+  Typography,
+  Container,
+  Button,
+  Collapse,
+  useTheme
+} from "@mui/material";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 
 const PermanentEyeBrows = () => {
   const { t } = useTranslation();
+  const [detailsVisible, setChecked] = React.useState(false);
+  const theme = useTheme();
+  const textColor = theme.palette.text.primary;
+  const handleDropDownClick = () => {
+    setChecked(!detailsVisible);
+  };
 
   return (
     <Grid
@@ -17,9 +30,27 @@ const PermanentEyeBrows = () => {
         alignSelf="center"
         sx={{mb: 2}}
       >
-        <Container>
+        <Button        
+        endIcon={detailsVisible ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
+        alignSelf="flex-start"
+        onClick={handleDropDownClick}
+        sx={{
+          ml: 1,
+          mb: 2,
+          width: 480,
+          textTransform: "none",
+          padding: 0,
+          color: { color: textColor },
+        }}
+      >
+        <Typography variant="h5">{t("MoreAboutPermanentBrows")}</Typography>
+      </Button>
+
+      <Container>
+        <Collapse in={detailsVisible}>
           <Typography alignSelf="flex-start">{t("PermanentBrowsText")}</Typography>
-        </Container>    
+        </Collapse>
+      </Container>
       </Grid>
   );
 };

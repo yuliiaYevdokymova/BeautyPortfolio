@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Box, Container, Typography } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 const Header = () => {
@@ -21,13 +21,17 @@ const Header = () => {
   }, [prefersDarkMode]);
 
   return (
-    <Box>
+    <Stack sx={{     
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",     
+    }}>
       {logo}
       <Typography variant="h3">{t("BeautyStylist")}</Typography>
       <Typography variant="h2" style={{ fontFamily: "Square Peg, cursive" }}>
         Yuliia Yevdokymova
       </Typography>   
-    </Box>
+    </Stack>
   );
 };
 

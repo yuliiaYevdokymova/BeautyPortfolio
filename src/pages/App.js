@@ -27,12 +27,10 @@ import PermanentEyeBrowsIntro from "../components/PermanentEyeBrowsIntro";
 import PermanentEyeBrows from "../components/PermanentEyeBrows";
 import About from "../components/About";
 import Contacts from "../components/Contacts";
-import Price from "../components/Price";
 
 function App() {
   const { t } = useTranslation();
-  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
-  const alignCenter = { display: "flex", alignItems: "center" };
+  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)"); 
   const theme = React.useMemo(() => {
     let theme = createTheme({
       palette: {
@@ -59,9 +57,10 @@ function App() {
         <LanguageSwitcher />
       </Box>
 
-      <StartWithMainGallery />
-
       <Greeting />
+
+      <StartWithMainGallery />
+    
 
       <Grid sx={{ mb: 2 }}>
         <Typography
@@ -110,13 +109,6 @@ function App() {
 
       <About />
 
-      <Grid sx={{ mb: 2 }}>
-        <Typography textAlign="center" alignSelf="center" variant="h5">
-          {t("Price")}
-        </Typography>
-      </Grid>
-
-      <Price />
       <Contacts />
     </ThemeProvider>
   );

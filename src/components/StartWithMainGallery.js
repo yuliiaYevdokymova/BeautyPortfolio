@@ -1,7 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Box, Grid, Typography } from "@mui/material";
-import Header from "../components/Header";
 import ImageGallery from "react-image-gallery";
 import getMainGalleryImages from "../functions/MainImages";
 
@@ -12,13 +11,12 @@ const StartWithMainGallery = () => {
   return (
     <Grid
         container
-        sx={{ minHeight: "100vh", mb:2}}
+        sx={{ mb:2}}
         direction="column"
         justify="center"
         textAlign="center"
         alignSelf="center"
-      >
-        <Header />
+      >      
 
         <Box
           sx={{
