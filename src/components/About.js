@@ -15,10 +15,10 @@ const About = () => {
         mb:2
       }}
     >
-      <Container
+      <Grid
         xs={12}
-        sm={6}
-        sx={{
+        md={6}
+        sx={{          
           display: "flex",
           textAlign: "center",
           alignSelf: "center",
@@ -26,10 +26,10 @@ const About = () => {
         }}
       >
         <Typography sx={{ width: "100%" }}>{t("AboutMeText")}</Typography>
-      </Container>
+      </Grid>
 
       <Grid
-        sm={6}
+        md={6}
         sx={{
           display: "flex",
           alignItems: "center",

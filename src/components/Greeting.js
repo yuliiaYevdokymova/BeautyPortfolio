@@ -23,12 +23,13 @@ const Greeting = () => {
         sx={{
           display: "flex",
           alignItems: "center",
-          justifyContent: "center",          
+          justifyContent: "center",  
+          mt: 2
         }}
       >
-        <Container
+        <Grid
           xs={12}
-          sm={6}
+          md={6}
           sx={{
             display: "flex",
             textAlign: "center",
@@ -36,6 +37,7 @@ const Greeting = () => {
             mb: 2,
           }}
         >
+          <Container sx={{ml: 1}}>
           <Typography sx={{ width: "100%" }}>
             {t("GreetingPart1")}{" "}
             <Typography sx={{ width: "100%" }}>
@@ -43,10 +45,11 @@ const Greeting = () => {
               {t("GreetingPart2")}{" "}
             </Typography>
           </Typography>
-        </Container>
+          </Container>
+        </Grid>
 
         <Grid
-          sm={6}
+          md={6}
           sx={{
             display: "flex",
             alignItems: "center",

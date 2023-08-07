@@ -59,8 +59,7 @@ function App() {
 
       <Greeting />
 
-      <StartWithMainGallery />
-    
+      <StartWithMainGallery />    
 
       <Grid sx={{ mb: 2 }}>
         <Typography

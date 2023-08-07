@@ -12,7 +12,7 @@ const EyeBrowsAndLashesIntro = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        mb:2
+        mb:2,       
       }}
     >
     
@@ -36,7 +36,7 @@ const EyeBrowsAndLashesIntro = () => {
         />
       </Grid>
 
-      <Container
+      <Grid
         xs={12}
         sm={6}
         sx={{
@@ -45,10 +45,10 @@ const EyeBrowsAndLashesIntro = () => {
           alignSelf: "center",
         }}
       >
-        <Typography sx={{ width: "100%" }}>
+        <Typography sx={{ width: "100%",   mr:2     }}>
           {t("EyeBrowsAndLashesText")}
         </Typography>
-      </Container>
+      </Grid>
     </Grid>
   );
 };
