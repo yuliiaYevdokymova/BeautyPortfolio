@@ -31,7 +31,7 @@ const About = () => {
             mb: 2,
           }}
         >
-          <Typography sx={{ width: "100%", ml:2 }}>{t("AboutMeText")}</Typography>
+          <Typography sx={{ width: "100%", ml:2, mr: 2 }}>{t("AboutMeText")}</Typography>
         </Grid>
 
         <Grid
