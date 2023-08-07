@@ -37,15 +37,15 @@ const LightMakeup = () => {
         alignSelf="flex-start"
         onClick={handleDropDownClick}
         sx={{
-          ml: 1,
+          ml: 2,
           mb: 2,
-          width: 250,
+          width: 280,
           textTransform: "none",
           padding: 0,
           color: { color: textColor },
         }}
       >
-        <Typography variant="h5">{t("LightMakeup")}</Typography>
+        <Typography variant="h5">{t("LightMakeup")} - 45 &#8364;</Typography>
       </Button>
 
       <Container>

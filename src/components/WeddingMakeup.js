@@ -37,15 +37,15 @@ const WeddingMakeup = () => {
         alignSelf="flex-start"
         onClick={handleDropDownClick}
         sx={{
-          ml: 1,
+          ml: 2,
           mb: 2,
-          width: 250,
+          width: 360,
           textTransform: "none",
           padding: 0,
           color: { color: textColor },
         }}
       >
-        <Typography variant="h5">{t("WeddingMakeup")}</Typography>
+        <Typography variant="h5">{t("WeddingMakeup")} - 80/100 &#8364;</Typography>
       </Button>
 
       <Container>

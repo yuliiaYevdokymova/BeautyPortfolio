@@ -42,7 +42,7 @@ const EyeBrowsAndLashes = () => {
         alignSelf="flex-start"
         onClick={handleBrowsDetailsDropDownClick}
         sx={{
-          ml: 1,
+          ml: 2,
           mb: 2,
           width: 250,
           textTransform: "none",
@@ -91,7 +91,7 @@ const EyeBrowsAndLashes = () => {
         alignSelf="flex-start"
         onClick={handleLashesDetailsDropDownClick}
         sx={{
-          ml: 1,
+          ml: 2,
           mb: 2,
           width: 250,
           textTransform: "none",
