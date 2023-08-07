@@ -36,7 +36,7 @@ const Makeup = () => {
         />
       </Grid>
 
-      <Grid
+      <Container
         xs={12}
         md={6}
         sx={{
@@ -45,8 +45,8 @@ const Makeup = () => {
           alignSelf: "center",
         }}
       >
-        <Typography sx={{ width: "100%", mr:2 }}>{t("MakeupMainText")}</Typography>
-      </Grid>
+        <Typography sx={{ width: "100%"}}>{t("MakeupMainText")}</Typography>
+      </Container>
     </Grid>
   );
 };

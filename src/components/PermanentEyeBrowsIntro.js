@@ -12,17 +12,16 @@ const PermanentEyeBrowsIntro = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        mb:2
+        mb: 2,
       }}
-    >      
-
+    >
       <Grid
         md={6}
         sx={{
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          mb:2
+          mb: 2,
         }}
       >
         <Box
@@ -36,7 +35,7 @@ const PermanentEyeBrowsIntro = () => {
         />
       </Grid>
 
-      <Grid
+      <Container
         xs={12}
         md={6}
         sx={{
@@ -44,9 +43,11 @@ const PermanentEyeBrowsIntro = () => {
           textAlign: "center",
           alignSelf: "center",
         }}
-      >
-        <Typography sx={{ width: "100%", mr: 2 }}>{t("PermanentBrowsIntroText")}</Typography>
-      </Grid>
+      >       
+          <Typography sx={{ width: "100%", mr: 2 }}>
+            {t("PermanentBrowsIntroText")}
+          </Typography>       
+      </Container>
     </Grid>
   );
 };

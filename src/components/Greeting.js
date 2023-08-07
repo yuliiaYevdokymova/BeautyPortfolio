@@ -27,7 +27,7 @@ const Greeting = () => {
           mt: 2
         }}
       >
-        <Grid
+        <Container
           xs={12}
           md={6}
           sx={{
@@ -36,17 +36,15 @@ const Greeting = () => {
             alignSelf: "center",
             mb: 2,
           }}
-        >
-          <Container sx={{ml: 1}}>
+        >        
           <Typography sx={{ width: "100%" }}>
             {t("GreetingPart1")}{" "}
             <Typography sx={{ width: "100%" }}>
               {" "}
               {t("GreetingPart2")}{" "}
             </Typography>
-          </Typography>
-          </Container>
-        </Grid>
+          </Typography>        
+        </Container>
 
         <Grid
           md={6}
