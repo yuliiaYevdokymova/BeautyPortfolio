@@ -74,8 +74,7 @@ const EyeBrowsAndLashes = () => {
             showPlayButton={false}
             showThumbnails={false}
             showBullets={true}
-            swipeThreshold="20"
-            lazyLoad={true}
+            swipeThreshold="20"           
           />
         </Box>
       </Grid>
@@ -123,8 +122,7 @@ const EyeBrowsAndLashes = () => {
             showPlayButton={false}
             showThumbnails={false}
             showBullets={true}
-            swipeThreshold="20"
-            lazyLoad={true}
+            swipeThreshold="20"           
           />
         </Box>
       </Grid>
