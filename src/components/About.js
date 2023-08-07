@@ -6,47 +6,54 @@ const About = () => {
   const { t } = useTranslation();
 
   return (
-    <Grid
-      container
-      sx={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        mb:2
-      }}
-    >
-      <Grid
-        xs={12}
-        md={6}
-        sx={{          
-          display: "flex",
-          textAlign: "center",
-          alignSelf: "center",
-          mb:2
-        }}
-      >
-        <Typography sx={{ width: "100%" }}>{t("AboutMeText")}</Typography>
+    <Box>
+      <Grid sx={{ mb: 2 }}>
+        <Typography textAlign="center" alignSelf="center" variant="h5">
+          {t("AboutMe")}
+        </Typography>
       </Grid>
-
       <Grid
-        md={6}
+        container
         sx={{
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          mb: 2,
         }}
       >
-        <Box
+        <Grid
+          xs={12}
+          md={6}
           sx={{
-            maxWidth: "75%",
-            height: "auto",
-            maxHeight: "80vh",
+            display: "flex",
+            textAlign: "center",
+            alignSelf: "center",
+            mb: 2,
           }}
-          component="img"
-          src={require("../assests/images/AboutMe.PNG")}
-        />
+        >
+          <Typography sx={{ width: "100%", ml:2 }}>{t("AboutMeText")}</Typography>
+        </Grid>
+
+        <Grid
+          md={6}
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Box
+            sx={{
+              maxWidth: "75%",
+              height: "auto",
+              maxHeight: "80vh",
+            }}
+            component="img"
+            src={require("../assests/images/AboutMe.PNG")}
+          />
+        </Grid>
       </Grid>
-    </Grid>
+    </Box>
   );
 };
 

@@ -99,13 +99,7 @@ function App() {
       <PermanentEyeBrowsIntro />
 
       <PermanentEyeBrows />
-
-      <Grid sx={{ mb: 2 }}>
-        <Typography textAlign="center" alignSelf="center" variant="h5">
-          {t("AboutMe")}
-        </Typography>
-      </Grid>
-
+      
       <About />
 
       <Contacts />
