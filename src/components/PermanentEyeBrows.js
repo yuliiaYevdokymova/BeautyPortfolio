@@ -37,13 +37,13 @@ const PermanentEyeBrows = () => {
         sx={{
           ml: 1,
           mb: 2,
-          width: 480,
+          width: 300,
           textTransform: "none",
           padding: 0,
           color: { color: textColor },
         }}
       >
-        <Typography variant="h5">{t("MoreAboutPermanentBrows")}</Typography>
+        <Typography variant="h6">{t("MoreAboutPermanentBrows")}</Typography>
       </Button>
 
       <Container>
