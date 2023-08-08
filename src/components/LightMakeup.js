@@ -12,7 +12,7 @@ import {
 import getLightMakeupGalleryImages from "../functions/LightMakeupmages";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
-import ImageGallery from "react-image-gallery";
+import HorizontalGallery from "./HorizontalGallery";
 
 const LightMakeup = () => {
   const { t } = useTranslation();
@@ -32,7 +32,7 @@ const LightMakeup = () => {
       alignSelf="center"
       sx={{ mb: 2 }}
     >
-      <Button        
+      <Button
         endIcon={detailsVisible ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
         alignSelf="flex-start"
         onClick={handleDropDownClick}
@@ -45,7 +45,7 @@ const LightMakeup = () => {
           color: { color: textColor },
         }}
       >
-        <Typography variant="h5">{t("LightMakeup")} - 45 &#8364;</Typography>
+        <Typography variant="h5">{t("LightMakeup")}</Typography>
       </Button>
 
       <Container>
@@ -58,17 +58,13 @@ const LightMakeup = () => {
         sx={{
           display: "flex",
           alignSelf: "center",
-          marginTop: 2,
-          width: "45vh",
-          maxWidth: "90vw",
+          marginTop: 2,         
+          width: "95%",
         }}
       >
-        <ImageGallery
-          items={getLightMakeupGalleryImages()}
-          showPlayButton={false}
-          showThumbnails={false}
-          showBullets={true}
-          swipeThreshold="20"       
+        <HorizontalGallery
+          images={getLightMakeupGalleryImages()}
+          dynamicBullets={false}
         />
       </Box>
     </Grid>

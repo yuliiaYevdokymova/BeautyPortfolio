@@ -2,7 +2,6 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import getEyeBrowsGalleryImages from "../functions/EyeBrowsImages";
 import getEyeLashesGalleryImages from "../functions/EyeLashesImages";
-import ImageGallery from "react-image-gallery";
 import {
   Box,
   Grid,
@@ -14,6 +13,7 @@ import {
 } from "@mui/material";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
+import HorizontalGallery from "./HorizontalGallery";
 
 const EyeBrowsAndLashes = () => {
   const { t } = useTranslation();
@@ -64,18 +64,11 @@ const EyeBrowsAndLashes = () => {
             display: "flex",
             alignSelf: "center",
             marginTop: 2,
-            width: "45vh",
-            maxWidth: "90vw",
+            width: "95%",
             mb: 2,
           }}
         >
-          <ImageGallery
-            items={getEyeBrowsGalleryImages()}
-            showPlayButton={false}
-            showThumbnails={false}
-            showBullets={true}
-            swipeThreshold="20"           
-          />
+          <HorizontalGallery images={getEyeBrowsGalleryImages()} dynamicBullets={false}/>
         </Box>
       </Grid>
 
@@ -113,17 +106,10 @@ const EyeBrowsAndLashes = () => {
             display: "flex",
             alignSelf: "center",
             marginTop: 2,
-            width: "45vh",
-            maxWidth: "90vw",
+            width: "95%",
           }}
         >
-          <ImageGallery
-            items={getEyeLashesGalleryImages()}
-            showPlayButton={false}
-            showThumbnails={false}
-            showBullets={true}
-            swipeThreshold="20"           
-          />
+           <HorizontalGallery images={getEyeLashesGalleryImages()} dynamicBullets={false}/>
         </Box>
       </Grid>
     </Grid>

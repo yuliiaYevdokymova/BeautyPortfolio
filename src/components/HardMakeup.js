@@ -12,7 +12,7 @@ import {
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import getHardMakeupGalleryImages from "../functions/HardMakeupImages";
-import ImageGallery from "react-image-gallery";
+import HorizontalGallery from "./HorizontalGallery";
 
 const HardMakeup = () => {
   const { t } = useTranslation();
@@ -45,7 +45,7 @@ const HardMakeup = () => {
           color: { color: textColor },
         }}
       >
-        <Typography variant="h5">{t("HardMakeup")} - 65 &#8364;</Typography>
+        <Typography variant="h5">{t("HardMakeup")}</Typography>
       </Button>
 
       <Container>
@@ -58,17 +58,10 @@ const HardMakeup = () => {
             display: "flex",
             alignSelf: "center",
             marginTop: 2,
-            width: "45vh",
-            maxWidth: "90vw",
+            width: "95%",
           }}
         >
-          <ImageGallery
-            items={getHardMakeupGalleryImages()}
-            showPlayButton={false}
-            showThumbnails={false}
-            showBullets={true}
-            swipeThreshold="20"           
-          />
+          <HorizontalGallery images={getHardMakeupGalleryImages()} dynamicBullets={false}/>
         </Box>
       </Grid>
   );

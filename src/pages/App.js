@@ -12,8 +12,6 @@ import {
 import CssBaseline from "@mui/material/CssBaseline";
 import Grid from "@mui/material/Unstable_Grid2";
 import Box from "@mui/material/Box";
-import "../styles/Gallery.css";
-import "../styles/image-gallery.scss";
 import { Typography } from "@mui/material";
 import StartWithMainGallery from "../components/StartWithMainGallery";
 import Greeting from "../components/Greeting";
@@ -55,21 +53,21 @@ function App() {
 
       <Box sx={{ position: "absolute", top: 5, right: 5 }}>
         <LanguageSwitcher />
-      </Box>
-
+      </Box>     
+     
       <Greeting />
 
       <StartWithMainGallery />    
 
       <Grid sx={{ mb: 2 }}>
-        <Typography
+        {/* <Typography
           textAlign="center"
           sx={{ mr: 2, ml: 2 }}
           alignSelf="center"
           variant="h5"
         >
           {t("MyServices")}
-        </Typography>
+        </Typography> */}
 
         <Typography alignSelf="flex-start" sx={{ ml: 3 }} variant="h5">
           {t("Makeup")}

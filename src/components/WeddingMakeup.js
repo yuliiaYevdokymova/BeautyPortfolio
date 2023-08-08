@@ -12,7 +12,7 @@ import {
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import getWeddingMakeupImages from "../functions/WeddingMakeupImages";
-import ImageGallery from "react-image-gallery";
+import HorizontalGallery from "./HorizontalGallery";
 
 const WeddingMakeup = () => {
   const { t } = useTranslation();
@@ -45,7 +45,7 @@ const WeddingMakeup = () => {
           color: { color: textColor },
         }}
       >
-        <Typography variant="h5">{t("WeddingMakeup")} - 80/100 &#8364;</Typography>
+        <Typography variant="h5">{t("WeddingMakeup")}</Typography>
       </Button>
 
       <Container>
@@ -59,17 +59,10 @@ const WeddingMakeup = () => {
             display: "flex",
             alignSelf: "center",
             marginTop: 2,
-            width: "45vh",
-            maxWidth: "90vw",
+            width: "95%",
           }}
         >
-          <ImageGallery
-            items={getWeddingMakeupImages()}
-            showPlayButton={false}
-            showThumbnails={false}
-            showBullets={true}
-            swipeThreshold="20"          
-          />
+          <HorizontalGallery images={getWeddingMakeupImages()} dynamicBullets={false}/>
         </Box>
       </Grid>
   );
