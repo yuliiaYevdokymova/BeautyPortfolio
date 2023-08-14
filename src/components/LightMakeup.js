@@ -48,7 +48,7 @@ const LightMakeup = () => {
         <Typography variant="h4">{t("LightMakeup")}</Typography>
       </Button>
 
-      <Container>
+      <Container sx={{mb:2}}>
         <Collapse in={detailsVisible}>
           <Typography alignSelf="flex-start">{t("LightMakeupText")}</Typography>
         </Collapse>

@@ -54,7 +54,7 @@ const EyeBrowsAndLashes = () => {
         <Typography variant="h4">{t("EyeBrows")}</Typography>
       </Button>
 
-      <Container>
+      <Container sx={{mb:2}}>
         <Collapse in={browsDetailsVisible}>
           <Typography alignSelf="flex-start">{t("EyeBrowsText")}</Typography>
         </Collapse>
@@ -94,7 +94,7 @@ const EyeBrowsAndLashes = () => {
         <Typography variant="h4">{t("EyeLashes")}</Typography>
       </Button>
 
-      <Container>
+      <Container sx={{mb:2}}>
         <Collapse in={lashesDetailsVisible}>
           <Typography alignSelf="flex-start">{t("EyeLashesText")}</Typography>
         </Collapse>
