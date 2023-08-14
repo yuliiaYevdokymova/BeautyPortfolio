@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Box, Grid, Typography, Container } from "@mui/material";
+import greetingPhoto from "../assests/images/GreetingPhoto.jpg";
 import Header from "./Header";
 
 const Greeting = () => {
@@ -18,13 +19,20 @@ const Greeting = () => {
       }}
     >
       <Header />
+
       <Grid
         container
         sx={{
           display: "flex",
           alignItems: "center",
-          justifyContent: "center",  
-          mt: 2
+          justifyContent: "center",
+          mt: 2,
+          backgroundImage: `url(${greetingPhoto})`,
+          backgroundPosition: "0% 20%",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundAttachment: "fixed",
+          minHeight: "75vh",
         }}
       >
         <Container
@@ -36,14 +44,14 @@ const Greeting = () => {
             alignSelf: "center",
             mb: 2,
           }}
-        >        
+        >
           <Typography sx={{ width: "100%" }}>
             {t("GreetingPart1")}{" "}
             <Typography sx={{ width: "100%" }}>
               {" "}
               {t("GreetingPart2")}{" "}
             </Typography>
-          </Typography>        
+          </Typography>
         </Container>
 
         <Grid
@@ -53,17 +61,7 @@ const Greeting = () => {
             alignItems: "center",
             justifyContent: "center",
           }}
-        >
-          <Box
-            sx={{
-              maxWidth: "75%",
-              height: "auto",
-              maxHeight: "70vh",
-            }}
-            component="img"
-            src={require("../assests/images/GreetingPhoto.jpg")}
-          />
-        </Grid>
+        ></Grid>
       </Grid>
     </Grid>
   );

@@ -12,7 +12,7 @@ import {
 import CssBaseline from "@mui/material/CssBaseline";
 import Grid from "@mui/material/Unstable_Grid2";
 import Box from "@mui/material/Box";
-import { Typography } from "@mui/material";
+import { Typography, Container } from "@mui/material";
 import StartWithMainGallery from "../components/StartWithMainGallery";
 import Greeting from "../components/Greeting";
 import Makeup from "../components/Makeup";
@@ -28,7 +28,7 @@ import Contacts from "../components/Contacts";
 
 function App() {
   const { t } = useTranslation();
-  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)"); 
+  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
   const theme = React.useMemo(() => {
     let theme = createTheme({
       palette: {
@@ -53,28 +53,28 @@ function App() {
 
       <Box sx={{ position: "absolute", top: 5, right: 5 }}>
         <LanguageSwitcher />
-      </Box>     
-     
-      <Greeting />
+      </Box>
 
-      <StartWithMainGallery />    
+      <Greeting />   
 
-      <Grid sx={{ mb: 2 }}>
-        {/* <Typography
+      <StartWithMainGallery />
+
+      <Grid sx={{ mb: 2 }}>      
+       <Typography
           textAlign="center"
           sx={{ mr: 2, ml: 2 }}
           alignSelf="center"
-          variant="h5"
+          variant="h2"
+          style={{ fontFamily: "Square Peg, cursive" }}
         >
           {t("MyServices")}
-        </Typography> */}
-
+        </Typography>
         <Typography alignSelf="flex-start" sx={{ ml: 3 }} variant="h5">
           {t("Makeup")}
         </Typography>
       </Grid>
 
-      <Makeup />
+      <Makeup/>
 
       <LightMakeup />
 
@@ -97,7 +97,7 @@ function App() {
       <PermanentEyeBrowsIntro />
 
       <PermanentEyeBrows />
-      
+
       <About />
 
       <Contacts />

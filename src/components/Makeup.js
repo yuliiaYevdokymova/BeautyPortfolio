@@ -32,7 +32,7 @@ const Makeup = () => {
             maxHeight: "80vh",
           }}
           component="img"
-          src={require("../assests/images/makeupMainPhoto.PNG")}
+          src={require("../assests/images/makeupMainPhoto.jpg")}
         />
       </Grid>
 
