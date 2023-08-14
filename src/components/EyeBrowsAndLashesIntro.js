@@ -12,7 +12,7 @@ const EyeBrowsAndLashesIntro = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        mb:2,       
+        mb:5,       
       }}
     >
     

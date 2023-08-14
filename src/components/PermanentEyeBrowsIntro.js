@@ -12,7 +12,7 @@ const PermanentEyeBrowsIntro = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        mb: 2,
+        mb: 5,
       }}
     >
       <Grid
@@ -21,7 +21,7 @@ const PermanentEyeBrowsIntro = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          mb: 2,
+          mb: 5,
         }}
       >
         <Box

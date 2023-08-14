@@ -23,7 +23,7 @@ const Contacts = () => {
       textAlign="center"
       alignSelf="center"
     >
-      <Typography justify="center" sx={{ marginTop: 2 }} variant="h5">
+      <Typography justify="center" sx={{ marginTop: 2 }} variant="h4">
         {t("Contacts")}
       </Typography>
 

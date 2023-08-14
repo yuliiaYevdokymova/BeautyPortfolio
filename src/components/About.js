@@ -21,7 +21,7 @@ const About = () => {
     theme.breakpoints.down("md")
   );
   const textColor = theme.palette.text.primary;
-  const aboutMeTypography =  <Typography textAlign="center" alignSelf="center" variant="h5">  {t("AboutMe")} </Typography>;
+  const aboutMeTypography =  <Typography textAlign="center" alignSelf="center" variant="h4">  {t("AboutMe")} </Typography>;
   const handleDropDownClick = () => {
     setChecked(!detailsVisible);
   };

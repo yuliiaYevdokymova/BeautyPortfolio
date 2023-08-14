@@ -28,7 +28,7 @@ const PermanentEyeBrows = () => {
         justify="center"
         textAlign="center"
         alignSelf="center"
-        sx={{mb: 2}}
+        sx={{mb: 5}}
       >
         <Button        
         endIcon={detailsVisible ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}

@@ -15,7 +15,7 @@ const StartWithMainGallery = () => {
       textAlign="center"
       alignSelf="center"
     >
-      <Typography justify="center" sx={{ marginTop: 2 }} variant="h5">
+      <Typography justify="center" sx={{ marginTop: 2, mb:2 }} variant="h4">
         {t("AllServices")}
       </Typography>
 

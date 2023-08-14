@@ -59,30 +59,30 @@ function App() {
 
       <StartWithMainGallery />
 
-      <Grid sx={{ mb: 2 }}>      
+      <Grid sx={{ mb: 5, mt: 5 }}>      
        <Typography
           textAlign="center"
-          sx={{ mr: 2, ml: 2 }}
+          sx={{ mr: 2, ml: 2, mb: 2 }}
           alignSelf="center"
-          variant="h2"
-          style={{ fontFamily: "Square Peg, cursive" }}
+          variant="h2"         
+          style={{ fontFamily: "Square Peg, cursive", fontSize:"7rem" }}
         >
           {t("MyServices")}
         </Typography>
-        <Typography alignSelf="flex-start" sx={{ ml: 3 }} variant="h5">
+        <Typography alignSelf="flex-start" sx={{ ml: 3 }} variant="h4">
           {t("Makeup")}
         </Typography>
       </Grid>
 
       <Makeup/>
 
-      <LightMakeup />
+      <LightMakeup/>
 
       <HardMakeup />
 
       <WeddingMakeup />
 
-      <Typography alignSelf="flex-start" sx={{ ml: 3, mb: 2 }} variant="h5">
+      <Typography alignSelf="flex-start" sx={{ ml: 3, mb: 5 }} variant="h4">
         {t("EyeBrowsAndLashes")}
       </Typography>
 
@@ -90,7 +90,7 @@ function App() {
 
       <EyeBrowsAndLashes />
 
-      <Typography alignSelf="flex-start" sx={{ ml: 3, mb: 2 }} variant="h5">
+      <Typography alignSelf="flex-start" sx={{ ml: 3, mb: 5 }} variant="h4">
         {t("PermanentBrows")}
       </Typography>
 

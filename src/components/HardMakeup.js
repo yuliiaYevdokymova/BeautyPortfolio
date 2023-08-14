@@ -30,7 +30,7 @@ const HardMakeup = () => {
         justify="center"
         textAlign="center"
         alignSelf="center"
-        sx={{ mb:2}}
+        sx={{mt: 5, mb: 5}} 
       >
        <Button        
         endIcon={detailsVisible ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
@@ -38,14 +38,14 @@ const HardMakeup = () => {
         onClick={handleDropDownClick}
         sx={{
           ml: 2,
-          mb: 2,
+          mb: 5,
           width: 280,
           textTransform: "none",
           padding: 0,
           color: { color: textColor },
         }}
       >
-        <Typography variant="h5">{t("HardMakeup")}</Typography>
+        <Typography variant="h4">{t("HardMakeup")}</Typography>
       </Button>
 
       <Container>
@@ -56,8 +56,7 @@ const HardMakeup = () => {
         <Box
           sx={{
             display: "flex",
-            alignSelf: "center",
-            marginTop: 2,
+            alignSelf: "center",          
             width: "95%",
           }}
         >

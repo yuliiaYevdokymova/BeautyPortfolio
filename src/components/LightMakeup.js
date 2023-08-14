@@ -29,8 +29,8 @@ const LightMakeup = () => {
       direction="column"
       justify="center"
       textAlign="center"
-      alignSelf="center"
-      sx={{ mb: 2 }}
+      alignSelf="center"     
+      sx={{mt: 5, mb: 5}} 
     >
       <Button
         endIcon={detailsVisible ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
@@ -38,14 +38,14 @@ const LightMakeup = () => {
         onClick={handleDropDownClick}
         sx={{
           ml: 2,
-          mb: 2,
+          mb: 5,
           width: 280,
           textTransform: "none",
           padding: 0,
           color: { color: textColor },
         }}
       >
-        <Typography variant="h5">{t("LightMakeup")}</Typography>
+        <Typography variant="h4">{t("LightMakeup")}</Typography>
       </Button>
 
       <Container>
@@ -57,8 +57,7 @@ const LightMakeup = () => {
       <Box
         sx={{
           display: "flex",
-          alignSelf: "center",
-          marginTop: 2,         
+          alignSelf: "center",       
           width: "95%",
         }}
       >

@@ -29,13 +29,14 @@ const EyeBrowsAndLashes = () => {
   };
 
   return (
-    <Grid sx={{ mb: 2 }}>
+    <Grid sx={{ mb: 5 }}>
       <Grid
         container
         direction="column"
         justify="center"
         textAlign="center"
         alignSelf="center"
+        sx={{ mb: 5 }}
       >
         <Button        
         endIcon={browsDetailsVisible ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
@@ -43,14 +44,14 @@ const EyeBrowsAndLashes = () => {
         onClick={handleBrowsDetailsDropDownClick}
         sx={{
           ml: 2,
-          mb: 2,
+          mb: 5,
           width: 250,
           textTransform: "none",
           padding: 0,
           color: { color: textColor },
         }}
       >
-        <Typography variant="h5">{t("EyeBrows")}</Typography>
+        <Typography variant="h4">{t("EyeBrows")}</Typography>
       </Button>
 
       <Container>
@@ -62,10 +63,8 @@ const EyeBrowsAndLashes = () => {
         <Box
           sx={{
             display: "flex",
-            alignSelf: "center",
-            marginTop: 2,
-            width: "95%",
-            mb: 2,
+            alignSelf: "center",          
+            width: "95%",            
           }}
         >
           <HorizontalGallery images={getEyeBrowsGalleryImages()} dynamicBullets={false}/>
@@ -85,14 +84,14 @@ const EyeBrowsAndLashes = () => {
         onClick={handleLashesDetailsDropDownClick}
         sx={{
           ml: 2,
-          mb: 2,
+          mb: 5,
           width: 250,
           textTransform: "none",
           padding: 0,
           color: { color: textColor },
         }}
       >
-        <Typography variant="h5">{t("EyeLashes")}</Typography>
+        <Typography variant="h4">{t("EyeLashes")}</Typography>
       </Button>
 
       <Container>
@@ -104,8 +103,7 @@ const EyeBrowsAndLashes = () => {
         <Box
           sx={{
             display: "flex",
-            alignSelf: "center",
-            marginTop: 2,
+            alignSelf: "center",          
             width: "95%",
           }}
         >
