@@ -25,6 +25,7 @@ const HorizontalGallery = ({ images, dynamicBullets }) => {
       }}      
       spaceBetween={10}
       navigation={true}
+      lazy={true}
       freeMode={true}
       breakpoints={{
         0: {
@@ -59,7 +60,7 @@ const HorizontalGallery = ({ images, dynamicBullets }) => {
         return (
           <SwiperSlide key={img.original} virtualIndex={i}>
             <div className="swiper-zoom-container">
-              <img src={img.original} alt="" />
+              <img src={img.original} alt="" loading="lazy"/>
             </div>
           </SwiperSlide>
         );
