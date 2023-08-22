@@ -2,13 +2,14 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, FreeMode } from "swiper/modules";
+import { Navigation, Pagination, FreeMode, Virtual  } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/free-mode";
+import 'swiper/css/virtual';
 
 const HorizontalGallery = ({ images, dynamicBullets }) => {
   const { t } = useTranslation();
@@ -51,11 +52,12 @@ const HorizontalGallery = ({ images, dynamicBullets }) => {
         clickable: true,
         dynamicBullets: { dynamicBullets },
       }}
-      modules={[Navigation, Pagination, FreeMode]}
+      modules={[Navigation, Pagination, FreeMode, Virtual ]}
+      virtual
     >
       {images.map((img, i) => {
         return (
-          <SwiperSlide key={img.original}>
+          <SwiperSlide key={img.original} virtualIndex={i}>
             <div className="swiper-zoom-container">
               <img src={img.original} alt="" />
             </div>

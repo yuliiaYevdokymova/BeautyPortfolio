@@ -18,6 +18,7 @@ const Makeup = () => {
 
       <Grid
         md={6}
+        item
         sx={{
           display: "flex",
           alignItems: "center",
@@ -39,6 +40,7 @@ const Makeup = () => {
       <Container
         xs={12}
         md={6}
+        item
         sx={{
           display: "flex",
           textAlign: "center",

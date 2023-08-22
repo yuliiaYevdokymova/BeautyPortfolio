@@ -61,6 +61,7 @@ const About = () => {
       >
         <Grid
           xs={12}
+          item
           md={6}
           sx={{
             display: "flex",
@@ -88,6 +89,7 @@ const About = () => {
 
         <Grid
           md={6}
+          item
           sx={{
             display: "flex",
             alignItems: "center",

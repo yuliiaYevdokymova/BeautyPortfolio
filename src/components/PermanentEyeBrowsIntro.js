@@ -17,6 +17,7 @@ const PermanentEyeBrowsIntro = () => {
     >
       <Grid
         md={6}
+        item
         sx={{
           display: "flex",
           alignItems: "center",
@@ -37,6 +38,7 @@ const PermanentEyeBrowsIntro = () => {
 
       <Container
         xs={12}
+        item
         md={6}
         sx={{
           display: "flex",

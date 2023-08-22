@@ -18,6 +18,7 @@ const EyeBrowsAndLashesIntro = () => {
     
       <Grid
         sm={6}
+        item
         sx={{
           display: "flex",
           alignItems: "center",
@@ -38,6 +39,7 @@ const EyeBrowsAndLashesIntro = () => {
 
       <Container
         xs={12}
+        item
         sm={6}
         sx={{
           display: "flex",

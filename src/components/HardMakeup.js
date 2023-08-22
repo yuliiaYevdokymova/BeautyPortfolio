@@ -33,8 +33,7 @@ const HardMakeup = () => {
         sx={{mt: 5, mb: 5}} 
       >
        <Button        
-        endIcon={detailsVisible ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
-        alignSelf="flex-start"
+        endIcon={detailsVisible ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}       
         onClick={handleDropDownClick}
         sx={{
           ml: 2,

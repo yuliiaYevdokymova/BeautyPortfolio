@@ -10,6 +10,7 @@ const Greeting = () => {
   return (
     <Grid
       direction="column"
+      container
       sx={{
         minHeight: "100vh",
         display: "flex",
@@ -22,6 +23,7 @@ const Greeting = () => {
 
       <Grid
         container
+        item
         sx={{
           display: "flex",
           alignItems: "center",
@@ -38,6 +40,7 @@ const Greeting = () => {
         <Container
           xs={12}
           md={6}
+          item
           sx={{
             display: "flex",
             textAlign: "center",
@@ -45,17 +48,19 @@ const Greeting = () => {
             mb: 2,
           }}
         >
+          <Box>
           <Typography sx={{ width: "100%" }}>
-            {t("GreetingPart1")}{" "}
-            <Typography sx={{ width: "100%" }}>
-              {" "}
-              {t("GreetingPart2")}{" "}
-            </Typography>
+            {t("GreetingPart1")}        
           </Typography>
+          <Typography sx={{ width: "100%" }}>             
+          {t("GreetingPart2")}     
+            </Typography>
+            </Box>
         </Container>
 
         <Grid
           md={6}
+          item
           sx={{
             display: "flex",
             alignItems: "center",

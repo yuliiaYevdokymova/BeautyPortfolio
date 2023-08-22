@@ -39,8 +39,7 @@ const EyeBrowsAndLashes = () => {
         sx={{ mb: 5 }}
       >
         <Button        
-        endIcon={browsDetailsVisible ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
-        alignSelf="flex-start"
+        endIcon={browsDetailsVisible ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}       
         onClick={handleBrowsDetailsDropDownClick}
         sx={{
           ml: 2,
@@ -79,8 +78,7 @@ const EyeBrowsAndLashes = () => {
         alignSelf="center"
       >
         <Button        
-        endIcon={lashesDetailsVisible ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
-        alignSelf="flex-start"
+        endIcon={lashesDetailsVisible ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}       
         onClick={handleLashesDetailsDropDownClick}
         sx={{
           ml: 2,
