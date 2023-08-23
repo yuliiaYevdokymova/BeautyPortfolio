@@ -28,7 +28,7 @@ const Makeup = () => {
       >
         <Box
           sx={{
-            maxWidth: "75%",
+            maxWidth: "90%",
             height: "auto",
             maxHeight: "80vh",
           }}
