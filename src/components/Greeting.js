@@ -32,7 +32,7 @@ const Greeting = () => {
           backgroundImage: `url(${greetingPhoto})`,
           backgroundPosition: "0% 20%",
           backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
+          backgroundSize: "cover",        
           backgroundAttachment: "fixed",
           minHeight: "75vh",
         }}
