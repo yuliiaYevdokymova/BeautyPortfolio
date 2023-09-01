@@ -16,7 +16,7 @@ export default function getWeddingMakeupImages () {
           original: require("../assests/WeddingMakeupGallery/5.jpg"),
         },
         {
-          original: require("../assests/WeddingMakeupGallery/6.JPG"),
+          original: require("../assests/WeddingMakeupGallery/6.jpg"),
         },
         {
           original: require("../assests/WeddingMakeupGallery/7.PNG"),

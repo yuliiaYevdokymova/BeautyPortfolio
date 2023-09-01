@@ -13,7 +13,7 @@ export default function getLightMakeupGalleryImages () {
           original: require("../assests/LightMakeupGallery/4.jpg"),
         },
         {
-          original: require("../assests/LightMakeupGallery/5.JPG"),
+          original: require("../assests/LightMakeupGallery/5.jpg"),
         },
         {
           original: require("../assests/LightMakeupGallery/6.jpeg"),
