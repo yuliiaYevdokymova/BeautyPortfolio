@@ -7,7 +7,7 @@ import {
   Container,
   Button,
   Collapse,
-  useTheme
+  useTheme,
 } from "@mui/material";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
@@ -25,15 +25,15 @@ const HardMakeup = () => {
 
   return (
     <Grid
-        container       
-        direction="column"
-        justify="center"
-        textAlign="center"
-        alignSelf="center"
-        sx={{mt: 5, mb: 5}} 
-      >
-       <Button        
-        endIcon={detailsVisible ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}       
+      container
+      direction="column"
+      justify="center"
+      textAlign="center"
+      alignSelf="center"
+      sx={{ mt: 5, mb: 5 }}
+    >
+      <Button
+        endIcon={detailsVisible ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
         onClick={handleDropDownClick}
         sx={{
           ml: 2,
@@ -47,21 +47,24 @@ const HardMakeup = () => {
         <Typography variant="h4">{t("HardMakeup")}</Typography>
       </Button>
 
-      <Container sx={{mb:2}}>
+      <Container sx={{ mb: 2 }}>
         <Collapse in={detailsVisible}>
           <Typography alignSelf="flex-start">{t("HardMakeupText")}</Typography>
         </Collapse>
       </Container>
-        <Box
-          sx={{
-            display: "flex",
-            alignSelf: "center",          
-            width: "95%",
-          }}
-        >
-          <HorizontalGallery images={getHardMakeupGalleryImages()} dynamicBullets={false}/>
-        </Box>
-      </Grid>
+      <Box
+        sx={{
+          display: "flex",
+          alignSelf: "center",
+          width: "95%",
+        }}
+      >
+        <HorizontalGallery
+          images={getHardMakeupGalleryImages()}
+          dynamicBullets={false}
+        />
+      </Box>
+    </Grid>
   );
 };
 
