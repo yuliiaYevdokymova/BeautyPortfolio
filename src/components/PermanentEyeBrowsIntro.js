@@ -1,55 +1,43 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Box, Grid, Typography, Container } from "@mui/material";
+import { Grid, useMediaQuery } from "@mui/material";
+import introPhoto from "../assests/images/PermanentMainPhoto.jpg";
+import PhotoWithText from "./PhotoWithText";
+import PhotoWithTextUnder from "./PhotoWithTextUnder";
 
 const PermanentEyeBrowsIntro = () => {
   const { t } = useTranslation();
+  const isSmallerThanMedium = useMediaQuery((theme) =>
+    theme.breakpoints.down("md")
+  );
 
-  return (
+  return isSmallerThanMedium ? (
     <Grid
       container
       sx={{
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        mb: 5,
+        mb: 2,
       }}
     >
-      <Grid
-        md={6}
-        item
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          mb: 5,
-        }}
-      >
-        <Box
-          sx={{
-            maxWidth: "90%",
-            height: "auto",
-            maxHeight: "80vh",
-          }}
-          component="img"
-          src={require("../assests/images/PermanentMainPhoto.PNG")}
-        />
-      </Grid>
-
-      <Container
-        xs={12}
-        item
-        md={6}
-        sx={{
-          display: "flex",
-          textAlign: "center",
-          alignSelf: "center",
-        }}
-      >       
-          <Typography sx={{ width: "100%", mr: 2 }}>
-            {t("PermanentBrowsIntroText")}
-          </Typography>       
-      </Container>
+      <PhotoWithTextUnder
+        image={introPhoto}
+        text={t("PermanentBrowsIntroText")}
+      />
+    </Grid>
+  ) : (
+    <Grid
+      direction="column"
+      container
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        mb: 2,
+      }}
+    >
+      <PhotoWithText image={introPhoto} text={t("PermanentBrowsIntroText")} />
     </Grid>
   );
 };
