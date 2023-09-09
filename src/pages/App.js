@@ -12,7 +12,7 @@ import {
 import CssBaseline from "@mui/material/CssBaseline";
 import Grid from "@mui/material/Unstable_Grid2";
 import Box from "@mui/material/Box";
-import { Typography, Container } from "@mui/material";
+import { Typography } from "@mui/material";
 import StartWithMainGallery from "../components/StartWithMainGallery";
 import Greeting from "../components/Greeting";
 import Makeup from "../components/Makeup";
@@ -55,17 +55,17 @@ function App() {
         <LanguageSwitcher />
       </Box>
 
-      <Greeting />   
+      <Greeting />
 
       <StartWithMainGallery />
 
-      <Grid sx={{ mb: 5, mt: 5 }}>      
-       <Typography
+      <Grid sx={{ mb: 5, mt: 5 }}>
+        <Typography
           textAlign="center"
           sx={{ mr: 2, ml: 2, mb: 2 }}
           alignSelf="center"
-          variant="h2"         
-          style={{ fontFamily: "Square Peg, cursive", fontSize:"7rem" }}
+          variant="h2"
+          style={{ fontFamily: "Square Peg, cursive", fontSize: "7rem" }}
         >
           {t("MyServices")}
         </Typography>
@@ -74,9 +74,9 @@ function App() {
         </Typography>
       </Grid>
 
-      <Makeup/>
+      <Makeup />
 
-      <LightMakeup/>
+      <LightMakeup />
 
       <HardMakeup />
 
@@ -98,7 +98,12 @@ function App() {
 
       <PermanentEyeBrows />
 
-      <About />
+      <Box>
+        <Typography textAlign="center" alignSelf="center" variant="h4">
+          {t("AboutMe")}
+        </Typography>
+        <About />
+      </Box>
 
       <Contacts />
     </ThemeProvider>
