@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid, Typography, Container, useMediaQuery } from "@mui/material";
 
-const PhotoWithText = ({ image, text }) => {
+const PhotoWithText = ({ image, text, backgroundPosition= '0% 0%' }) => {
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
   return (
     <Grid
@@ -13,7 +13,7 @@ const PhotoWithText = ({ image, text }) => {
         justifyContent: "center",
         mt: 2,
         backgroundImage: `url(${image})`,
-        backgroundPosition: "0% 0%",
+        backgroundPosition: backgroundPosition,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         minHeight: "75vh",
