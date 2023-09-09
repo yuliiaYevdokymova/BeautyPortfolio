@@ -1,12 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.776b9b6c.css",
-    "main.js": "/static/js/main.63b80bfb.js",
+    "main.js": "/static/js/main.cd22804c.js",
     "static/js/787.a7305812.chunk.js": "/static/js/787.a7305812.chunk.js",
     "static/media/GreetingPhoto.jpg": "/static/media/GreetingPhoto.59c62105e796a5b54eb7.jpg",
-    "static/media/MainBrowsAndLashesImage.jpg": "/static/media/MainBrowsAndLashesImage.e2014b7b43e830d76322.jpg",
     "static/media/makeupMainPhoto.jpg": "/static/media/makeupMainPhoto.2744639bfe3a626d55c9.jpg",
     "static/media/3.JPG": "/static/media/3.c839fd684346b09906bc.JPG",
+    "static/media/PermanentMainPhoto.jpg": "/static/media/PermanentMainPhoto.b3da9d5d1e144bc1257b.jpg",
+    "static/media/MainBrowsAndLashesImage.jpg": "/static/media/MainBrowsAndLashesImage.9600ed2c6321e37533dc.jpg",
     "static/media/11.jpg": "/static/media/11.d90f7cc3ff5818e11340.jpg",
     "static/media/2.JPG": "/static/media/2.336bea4cb2abafb5e2ba.JPG",
     "static/media/13.jpg": "/static/media/13.17010bc6c53b4124c2a7.jpg",
@@ -40,17 +41,16 @@
     "static/media/darkLogo.png": "/static/media/darkLogo.42a28424ad39c8d030dc.png",
     "static/media/9.JPG": "/static/media/9.6a2bbb05835a103be252.JPG",
     "static/media/17.jpg": "/static/media/17.74f88952ffefb829294c.jpg",
-    "static/media/PermanentMainPhoto.PNG": "/static/media/PermanentMainPhoto.053c04515277901433cd.PNG",
     "static/media/AboutMe.PNG": "/static/media/AboutMe.65cc9bb76784da33d10b.PNG",
     "static/media/7.PNG": "/static/media/7.b3ff783808cf1534182f.PNG",
     "static/media/4.PNG": "/static/media/4.a892d825b5a08e21ffd8.PNG",
     "index.html": "/index.html",
     "main.776b9b6c.css.map": "/static/css/main.776b9b6c.css.map",
-    "main.63b80bfb.js.map": "/static/js/main.63b80bfb.js.map",
+    "main.cd22804c.js.map": "/static/js/main.cd22804c.js.map",
     "787.a7305812.chunk.js.map": "/static/js/787.a7305812.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.776b9b6c.css",
-    "static/js/main.63b80bfb.js"
+    "static/js/main.cd22804c.js"
   ]
 }
