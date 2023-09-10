@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Box, Grid, Typography, Container } from "@mui/material";
-import greetingPhoto from "../assests/images/GreetingPhoto.jpg";
+import "../styles/Greeting.css";
 import Header from "./Header";
 
 const Greeting = () => {
@@ -24,18 +24,7 @@ const Greeting = () => {
       <Grid
         container
         item
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          mt: 2,
-          backgroundImage: `url(${greetingPhoto})`,
-          backgroundPosition: "0% 20%",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",        
-          backgroundAttachment: "fixed",
-          minHeight: "75vh",
-        }}
+        id="backgroundImage"            
       >
         <Container
           xs={12}

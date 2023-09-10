@@ -1,0 +1,12 @@
+#backgroundImage {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2;
+    background-image: url("../assests/images/GreetingPhoto.jpg");
+    background-position: 0% 20%;
+    background-repeat: no-repeat;
+    background-size: cover;   
+    background-attachment: fixed;   
+  }
