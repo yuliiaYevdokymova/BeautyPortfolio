@@ -25,6 +25,7 @@ import PermanentEyeBrowsIntro from "../components/PermanentEyeBrowsIntro";
 import PermanentEyeBrows from "../components/PermanentEyeBrows";
 import About from "../components/About";
 import Contacts from "../components/Contacts";
+import Compliance from "../components/Compliance";
 
 function App() {
   const { t } = useTranslation();
@@ -121,6 +122,8 @@ function App() {
       </Grid>
 
       <Contacts />
+
+      <Compliance/>
     </ThemeProvider>
   );
 }

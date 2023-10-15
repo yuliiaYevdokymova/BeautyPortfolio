@@ -5,6 +5,7 @@ import {
   Grid,
   Typography,
   IconButton,
+  Link
 } from "@mui/material";
 import TikTokIcon from "./TikTokIcon";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -33,7 +34,8 @@ const Contacts = () => {
         </Typography>
 
         <Typography justify="center" sx={{ marginTop: 2 }}>
-          {t("Phone")} : +4917682277511
+       
+          {t("Phone")} :  <Link href="tel:+4917682277511"> +4917682277511 </Link>
         </Typography>
 
         <Typography justify="center" sx={{ marginTop: 2 }}>
