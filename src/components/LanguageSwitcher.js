@@ -6,7 +6,7 @@ import { styled } from "@mui/material/styles";
 
 const LanguageSwitcher = () => {
   const languageStorageKey = "selectedLanguage";
-  const language = localStorage.getItem(languageStorageKey);
+  const language = localStorage.getItem(languageStorageKey) || "de";
   const { t, i18n } = useTranslation(); 
   const handleLanguageChange = (e) => {
     const newLang = e.target.value;
