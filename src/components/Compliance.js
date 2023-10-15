@@ -11,10 +11,13 @@ import {
   DialogActions,
   useTheme,
 } from "@mui/material";
+import DataProtection from "./DataProtection";
+import DataProtectionEn from "./DataProtectionEn";
 
-const Contacts = () => {
-  const { t } = useTranslation();
+const Compliance = () => {
+  const { t, i18n  } = useTranslation();
   const [open, setOpen] = React.useState(false);
+  const [dataProtectionOpen, setDataProtectionOpen] = React.useState(false);
   const theme = useTheme();
   const textColor = theme.palette.text.primary;
 
@@ -24,6 +27,14 @@ const Contacts = () => {
 
   const handleClose = () => {
     setOpen(false);
+  };
+
+  const handleDataProtectionClickOpen = () => {
+    setDataProtectionOpen(true);
+  };
+
+  const handleDataProtectionClickClose = () => {
+    setDataProtectionOpen(false);
   };
 
   return (
@@ -41,6 +52,14 @@ const Contacts = () => {
           sx={{ color: { color: textColor }, textDecoration: "underline" }}
         >
           {t("Impressum")}
+        </Button>
+
+        <Button
+          variant="text"
+          onClick={handleDataProtectionClickOpen}
+          sx={{ color: { color: textColor }, textDecoration: "underline" }}
+        >
+          {t("DataProtection")}
         </Button>
 
         <Dialog open={open} onClose={handleClose}>
@@ -65,7 +84,23 @@ const Contacts = () => {
           </DialogContent>
           <DialogActions>
             <Button onClick={handleClose} autoFocus>
-              Close
+              {t("Ok")}
+            </Button>
+          </DialogActions>
+        </Dialog>
+
+        <Dialog
+          open={dataProtectionOpen}
+          onClose={handleDataProtectionClickClose}
+        >
+          <DialogTitle>{t("DataProtection")}</DialogTitle>
+
+          <DialogContent>
+           {i18n.language === "de" ? <DataProtection /> : <DataProtectionEn/>}
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={handleDataProtectionClickClose} autoFocus>
+              {t("Ok")}
             </Button>
           </DialogActions>
         </Dialog>
@@ -74,4 +109,4 @@ const Contacts = () => {
   );
 };
 
-export default Contacts;
+export default Compliance;
