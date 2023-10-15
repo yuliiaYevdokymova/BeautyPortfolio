@@ -105,6 +105,21 @@ function App() {
         <About />
       </Box>
 
+      <Grid
+      container
+      direction="column"
+      justify="center"
+      textAlign="center"
+      alignSelf="center"
+    >
+      <Typography justify="center" sx={{ marginTop: 2 }} variant="h4">
+        {t("Price")}
+      </Typography>
+
+      <Typography variant="h6">{t("PriceText")}</Typography>
+
+      </Grid>
+
       <Contacts />
     </ThemeProvider>
   );
